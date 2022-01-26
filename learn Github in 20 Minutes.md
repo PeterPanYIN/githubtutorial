@@ -136,10 +136,11 @@ git branch -D testbranch # 强制删除没有 merge 的 branch
 2. 暂存所有修改：`git add -A`
 3. 提交修改：`git commit -m "delete all commit history" `
 4. 删除 `main` branch: `git branch -D main`，由于此时 main branch 并没有被 merge 进当前的branch，因此需要用 `-D` 而非 `-d`。
-5. 重命名当前 branch 到 main `git branch -m main` 
+5. 重命名当前 branch 到 main： `git branch -m main` 
 6. 最后，强制更新当前的代码仓库：`git push -f origin main`
 
-
+`git branch -m (--move) branch_name` 将当前 branch 重命名为 `branch_name` 
+`git branch -M branch_name` 等价于 `git branch --move --force`，强制改名。
 
 ---
 
